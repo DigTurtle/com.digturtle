@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 26, 2015, 8:54:09 PM
+    Author     : BrandonWard
+*/
+
+[type="text"].ng-dirty.ng-valid {
+  background: #ECFFEC;
+  position: relative;
+}
+
+[type="text"].ng-dirty.ng-invalid {
+  background: #FFCFD0;
+}
+
+.bg-danger {
+  color: #fff;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body { margin: 2em; }
+h1 span img { width: 50px; height: 50px; }
+::-webkit-input-placeholder { color: #666 !important;}
+:-moz-placeholder { color: #666 !important;  }
+::-moz-placeholder { color: #666 !important;  }
+:-ms-input-placeholder { color: #666 !important;  }
