@@ -16,6 +16,6 @@ myApp.controller("formCtrl",["$scope", function($scope){
     if($scope.form.$valid){
       alert("Form Submitted!");
     }
-  }
+  };
   
 }]);
