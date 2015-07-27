@@ -4,73 +4,81 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>DigTurtle</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/vendor/angular.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/menu.css">
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <!--The link below is JQuery, exactly what we are trying to avoid.-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="img/*">
-
-
-
     </head>
     <body>
-        <!--  Top Header -->
-        <div class="header">
-            <h1>DigTurtle</h1>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">DigTurtle</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#apps">Apps</a></li>
+                        <li><a href="#apps">Websites</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>DigTurtle</h1>
+                <p>Founded in 2015, DigTurtle is a mobile application and website studio, dedicated to
+                providing strong technological solutions.  Here at DigTurtle, we strive to be at the forefront
+                of innovation, never ceasing to push the boundaries.  Our domain currently lies in mobile gaming, web development,
+                and business solutions.  Please check back often to see our new products, both released and upcoming.  For status updates
+                please subscribe to our mailing list!</p> 
+            </div>
+            <div class="row" id="about">
+                <h1>Meet the Team</h1>
+                <div class="col-sm-4">
+                    <h3>Justin Dizon</h3>
+                    <img src="img/justin.jpg" alt="Justin" style="width:128px;height:128px;">
+                    <p>Justin is an avid web developer.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Brandon Ward</h3>
+                    <img src="img/brandon.jpg" alt="Brandon" style="width:128px;height:128px;">
+                    <p>Brandon is an adept mobile application developer.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Chris Hadfield</h3>
+                    <img src="img/chris.jpg" alt="Chris" style="width:128px;height:128px;">
+                    <p>Chris is a whiz back-end developer.</p>
+                </div>
+            </div>
+             <div class="row" id="apps">
+                <h1>Our Projects</h1>
+                <div class="col-sm-4">
+                    <h3>Mobile Gaming</h3>
+                    <p>Our first mobile game is well under way. Codename: Project Doorz, our hello to the world.
+                    We are very excited to release this to the public, currently we are slated to release in 2016 for iOS, Android, and Windows mobile devices.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Websites</h3>
+                    <p>Our prized possession is this very website.  the other websites we have either built or helped to build are:</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Business Solutions</h3>
+                    <p>Pairing with our business partners guarantees to provide some cutting edge products in the near future.
+                    Check back soon for more info on what we have been up to here.</p>
+                </div>
+            </div>
         </div>
-        <!-- Navigation and side bar -->
-        <div class="nav">
-            <a href="bootstrap.html">About</a><br>
-            <a href="bootstrap.html">Apps</a><br>
-            <a href="bootstrap.html">Websites</a><br>
-            <a href="contact.html">Contact</a><br>
-        </div>
-        <!-- section 1 -->
-        <div class="section1">
-            <h1>Legit Coders</h1>
-            <img src="img/justin.jpg" alt="Justin" style="width:128px;height:128px;">
-            <img src="img/brandon.jpg" alt="Brandon" style="width:128px;height:128px;">
-            <img src="img/chris.jpg" alt="Chris" style="width:128px;height:128px;">
-        </div>
-        <div class="section2">
-            <h1>Legit Coders</h1>
-            <img src="img/justin.jpg" alt="Justin" style="width:128px;height:128px;">
-            <img src="img/brandon.jpg" alt="Brandon" style="width:128px;height:128px;">
-            <img src="img/chris.jpg" alt="Chris" style="width:128px;height:128px;">
-        </div>
-
-        <!-- footer -->
-        <div class="footer">
-            Copyright © DigTurtle
-        </div>
-
-        <!-- Adding the ng-app declaration to initialize AngularJS -->
-        <div id="main" ng-app>
-            <!-- The navigation menu will get the value of the "active" variable as a class.
-                     The $event.preventDefault() stops the page from jumping when a link is clicked. -->
-
-            <nav class="{{active}}" ng-click="$event.preventDefault()">
-
-                <!-- When a link in the menu is clicked, we set the active variable -->
-
-                <a href="#" class="home" ng-click="active = 'home'">Home</a>
-                <a href="#" class="projects" ng-click="active = 'projects'">Projects</a>
-                <a href="#" class="services" ng-click="active = 'services'">Services</a>
-                <a href="#" class="contact" ng-click="active = 'contact'">Contact</a>
-            </nav>
-
-            <!-- ng-show will show an element if the value in the quotes is truthful,
-                     while ng-hide does the opposite. Because the active variable is not set
-                     initially, this will cause the first paragraph to be visible. -->
-
-            <p ng-hide="active">Please click a menu item</p>
-            <p ng-show="active">You chose <b>{{active}}</b></p>
-        </div>
-
-
     </body>
 </html>
+
