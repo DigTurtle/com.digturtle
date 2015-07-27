@@ -14,8 +14,14 @@ and open the template in the editor.
      width: 100%;
     bottom:10px;
     background-size: cover;
-    overflow: hidden;
-    color: white; 
-   
+    overflow: hidden; 
 
+}
+.col-sm-4{
+    text-align: center;
+    background-color: lightgray;
+}
+.img-circle{
+    border-radius:50%;
+    
 }
