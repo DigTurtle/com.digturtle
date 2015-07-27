@@ -8,3 +8,14 @@ and open the template in the editor.
     Author     : Justisin7
 */
 
+.jumbotron{
+    /*background-image: url('img/turtlebackgroun.jpg');*/
+    background-image: url('turtlebackground.jpg') ;
+     width: 100%;
+    bottom:10px;
+    background-size: cover;
+    overflow: hidden;
+    color: white; 
+   
+
+}
